@@ -1,0 +1,85 @@
+
+/*Element CSS*/
+html, body{
+    background-image: url("../images/bible-background.jpg");
+     /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    background-color: black;
+    color: red;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*Properties for sticky footer, flexbox for variable height*/
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container{
+    flex: 1;
+}
+
+header{
+    text-align: center;
+    color: red;
+}
+
+footer{
+    text-align: center;
+    background-color: skyblue;
+    color: red;
+    padding: 20px 0 10px;
+    margin-top: 20px;
+    border-top: 1px solid steelblue;
+    font-size: 10px;
+}
+
+h3 {
+    text-align: center;
+    background-color: skyblue;
+    color: red;
+    padding: 20px 0 10px;
+    margin-top: 5px;
+    border-top: 1px solid steelblue;
+    font-size: 30px;
+
+}
+
+img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*id CSS*/
+#main-header{
+    background-color: skyblue;
+    width: 100%;
+    padding: 2% 0;
+    margin-bottom: 5%;
+    border-bottom: 1px solid steelblue;
+}
+
+#img-container{
+    border: 5px solid red;
+    background-color: steelblue;
+    padding: 5px;
+    min-height: 20px;
+}
+
+#section-block{
+    border: 5px solid red;
+    text-align: center;
+}
+
+#aside-block{
+    border: 5px solid red;
+}
