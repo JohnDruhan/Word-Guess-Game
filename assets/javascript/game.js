@@ -1,7 +1,7 @@
 
-//HTML hookup variables
-var userGuess = document.getElementById("userGuess"); //TODO link to show past wrong guess
-var userAnswer = document.getElementById("userAnswer"); //TODO link to show users right guesses
+//HTML variables
+var userGuess = document.getElementById("userGuess"); //show past wrong guess
+var userAnswer = document.getElementById("userAnswer"); //show users right guesses
 var userWins = document.getElementById("win");
 var userLoss = document.getElementById("lose");
 var userTries = document.getElementById("tries");
@@ -10,15 +10,15 @@ var img = document.getElementById("picture");
 var message = document.getElementById("message");
 var inputField = document.getElementById("textInput");
 
-//Object Class that holds the game core data
+//Object Class that holds the "game core" or gameCore data
 var gameCore = {
 
     winCount: 0,
     loseCount: 0,
     triesLeft: 10,
 
-    wordList: ['MOSES', 'NOAH', 'ABRAHAM', 'JESUS', 'MARY', 'RUTH', 'ISAAC', 'MATTHEW', 'MARK', 'LUKE', 'JOHN', ], //List of names for game
-    imgList: ['Moses.jpeg', 'Noah.jpg', 'Abraham.jpeg', 'Jesus.jpg', 'Mary.jpeg', 'Ruth.jpeg', 'Isaac.jpeg', 'Matthew.jpg', 'Mark.jpeg', 'Luke.jpeg', 'John.jpeg',], //List image reference
+    wordList: ['MOSES', 'NOAH', 'ABRAHAM', 'JESUS', 'MARY', 'RUTH', 'ISAAC', 'MATTHEW', 'MARK', 'LUKE', 'JOHN', 'SAUL', 'JOB', 'ABEL', 'SAMUEL', 'ESTHER', 'SAMSON', 'JOSHUA', 'JONAH', 'DANIEL', 'GABRIEL',  ], //List of names for game
+    imgList: ['Moses.jpeg', 'Noah.jpg', 'Abraham.jpeg', 'Jesus.jpg', 'Mary.jpeg', 'Ruth.jpeg', 'Isaac.jpeg', 'Matthew.jpg', 'Mark.jpeg', 'Luke.jpeg', 'John.jpeg', 'Saul.jpeg', 'Job.jpeg', 'Abel.jpeg', 'Samuel.jpeg', 'Esther.jpeg', 'Samson.jpeg', 'Joshua.jpeg', 'Jonah.jpeg', 'Daniel.jpeg', 'Gabriel.jpeg', ], //List image reference
 
     answers: "",
     imageSrc: "",
@@ -39,7 +39,6 @@ var gameCore = {
         var ranNum = Math.floor(Math.random() * this.wordList.length)
         this.answers = this.wordList[ranNum];
         this.imageSrc = this.imgList[ranNum];
-        //console.log(this.answers); //DEBUG CODE/ GAME CHEAT REMOVE WHEN DONE
         this.displayWordBlank();
 
         message.textContent = "Someone from the Bible";
